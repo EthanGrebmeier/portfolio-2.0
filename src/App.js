@@ -1,6 +1,5 @@
 import './App.scss';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Home from './components/Home/Home'
+import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 import Navigation from './components/Navigation/Navigation'
 import PortfolioContent from './components/PortfolioContent/PortfolioContent'
 
@@ -11,9 +10,9 @@ function App() {
     
       <Router>
         <Navigation />
-        <Route exact path="/" render={ () => ( <PortfolioContent  page="Home" />) } />
+        <Route exact path="/" render={ () => ( <Redirect to="/about" />) } />
         <Route exact path="/:page" render={ ({ match }) => (<PortfolioContent  page={match.params.page} />) } />
-        <Route path="/projects/:project-name" component={PortfolioContent} />
+        <Route path="/projects/:projectName" render={ ({ match }) => (<PortfolioContent  page="project" projectName={match.params.projectName} />) } />
       </Router>
     </div>
 

@@ -1,0 +1,50 @@
+{
+    "traace" : {
+        "name" : "Traace.io",
+        "timeline" : "Sep 2020 - Dec 2020",
+        "description" : "A Contact Tracing Aplication for Covid-19",
+        "stack" : ["React", "Express", "PostreSQL"],
+        "gitHub" : "https://github.com/EthanGrebmeier/contact-tracing-server",
+        "demo" : "https://traace.io" 
+    },
+    "sorter" : {
+        "name" : "Sorter",
+        "timeline" : "Jun 2020",
+        "description" : "A Sorting Algorithm Visualizer",
+        "stack" : ["React"],
+        "gitHub" : "https://github.com/EthanGrebmeier/sorter",
+        "demo" : "" 
+    },
+    "say-hello" : {
+        "name" : "Say Hello",
+        "timeline" : "May 2020 - Jun 2020",
+        "description" : "A Contact Tracing Aplication for Covid-19",
+        "stack" : ["React", "Express", "MongoDB"],
+        "gitHub" : "https://github.com/EthanGrebmeier/say-hello",
+        "demo" : "https://traace.io" 
+    },
+    "memorizer" : {
+        "name" : "Memorizer",
+        "timeline" : "May 2020",
+        "description" : "A Memorization Matching Game",
+        "stack" : ["Javascript"],
+        "gitHub" : "https://github.com/EthanGrebmeier/memorizer",
+        "demo" : "https://traace.io" 
+    },
+    "reader" : {
+        "name" : "Reader",
+        "timeline" : "May 2020",
+        "description" : "A Speed Reading Assistant",
+        "stack" : ["Javascript"],
+        "gitHub" : "https://github.com/EthanGrebmeier/reader",
+        "demo" : "https://traace.io" 
+    },
+    "guesser" : {
+        "name" : "Guesser",
+        "timeline" : "April 2020",
+        "description" : "A Number Guessing Game",
+        "stack" : ["Javascript"],
+        "gitHub" : "https://github.com/EthanGrebmeier/guesser",
+        "demo" : "https://traace.io" 
+    }
+}

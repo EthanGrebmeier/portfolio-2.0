@@ -1,24 +1,38 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+
+import AboutMe from '../AboutMe/AboutMe'
+import Project from '../Project/Project'
 import './PortfolioContent.scss'
 
-export default class PortfolioContent extends React.Component{
-    constructor(props){
-        super(props)
-        this.state = {
+function PortfolioContent(props){
 
+    useEffect(() => {
+        console.log(props.projectName)
+    }, [])
+
+    let getPortfolioContent = (page) => {
+        switch (page) {
+            case "about":
+                
+                return (<AboutMe/>)
+        
+            case "project":
+                
+                return (<Project
+                    projectName={props.projectName}
+                    key={props.projectName}
+                    />)
+        
+            default:
+                return <h1> {page} </h1>
         }
     }
 
-    componentDidMount(){
-        console.log(this.props.page)
-    }
-
-    render(){
-        
-        return ( 
-            <div className="portfolio-content">
-                <h1> {this.props.page} </h1>
-            </div>
-        )
-    }
+    return ( 
+        <div className="portfolio-content">
+            {getPortfolioContent(props.page)}
+        </div>
+    )
 }
+
+export default PortfolioContent

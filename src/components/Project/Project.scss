@@ -1,0 +1,68 @@
+.project-content{
+    height: 85%;
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: end;
+
+    .project-description-text, .project-div-item{
+        font-family: 'Montserrat-Thin';
+    }
+
+    .divider{
+        background-color: #EAF4F4;
+    }
+
+}
+
+.project-header{
+    height: 30%;
+}
+
+.project-name{
+    color: #EAF4F4;
+}
+
+.project-description{
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.project-description-text{
+    max-width: 500px;
+}
+
+.project-stack{
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+
+
+.project-links{
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-link{
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 180px;
+    height: 40px;
+    background-color: #EAF4F4;
+    font-size: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
