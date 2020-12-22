@@ -9,7 +9,12 @@
     .project-description-text, .project-div-item{
         font-family: 'Montserrat-Thin';
     }
+}
 
+@media screen and (min-width: 1000px) and (max-height: 700px){
+    .project-content{
+        height: 100%;
+    }
 }
 
 .project-header{
@@ -38,8 +43,6 @@
     justify-content: space-around;
     align-items: flex-end;
 }
-
-
 
 .project-links{
     height: 15%;
