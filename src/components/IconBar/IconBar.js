@@ -12,6 +12,10 @@ let clickLinkedin = () => {
     window.open("https://www.linkedin.com/in/ethan-g-b23439116/", "_blank")
 }
 
+let clickEmail = () => {
+    window.open("mailto:ethangrebmeier@gmail.com", "_blank")
+}
+
 
 let switchColor = (currentMode, switchColorMode) => {
     switch (currentMode) {
@@ -43,7 +47,7 @@ function IconBar(props){
                 {getColorSwitch(props.colorMode, props.color)}
             </button>
 
-            <button className="icon-bar-button">
+            <button className="icon-bar-button" onClick={clickEmail}>
                 <UilEnvelope size="30" color={props.color}/>
             </button>
             
