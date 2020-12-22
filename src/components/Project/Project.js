@@ -25,7 +25,6 @@ class Project extends React.Component {
     getProjectDetails = (project) => {
         
         let projectObject = projects[project]
-        console.log(projectObject)
         this.setState({
             projectName: projectObject["name"],
             projectTimeline: projectObject["timeline"],
