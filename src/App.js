@@ -10,7 +10,7 @@ import {getColorsObject, getColors} from './components/colors/colors.js'
 
 function App() {
 
-  let [colorMode, setColorMode] = useState("dark")
+  let [colorMode, setColorMode] = useState("light")
   let [showMobileNav, setShowMobileNav] = useState(false)
 
   useEffect(() => {
