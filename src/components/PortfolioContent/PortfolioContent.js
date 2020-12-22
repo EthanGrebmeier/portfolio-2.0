@@ -9,7 +9,6 @@ import './PortfolioContent.scss'
 function PortfolioContent(props){
 
     useEffect(() => {
-        console.log(props.projectName)
         props.setShowMobileNav(false)
     }, [])
 
