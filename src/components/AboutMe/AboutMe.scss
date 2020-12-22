@@ -6,7 +6,6 @@
     align-items: flex-end;
     .divider{
         width: 45%;
-        background-color: #EAF4F4;
     }
 }
 
@@ -16,7 +15,6 @@
     flex-direction: column;
     justify-content: space-between;
 
-    color:  #EAF4F4;
 }
 
 .about-me-professional{
@@ -52,6 +50,7 @@
 
 .about-me-skills-section{
     width: 40%;
+    min-width: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -62,4 +61,46 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1000px){
+
+    .about-me-content{
+        height: 100%;
+        align-items: center;
+        .divider{
+            width: 100%;
+        }
+    }
+
+    .about-me-title{
+        width: 100%;
+    }
+
+    .mobile-nametag{
+        max-width: 400px;
+    }
+
+    .about-me-professional{
+        width: 100%;
+        align-items: flex-start;
+        min-width: 0;
+    }
+
+    .about-me-professional-text{
+        text-align: start;
+        margin-left: 10px;
+    }
+
+    .about-me-professional-section{
+        flex-direction: row-reverse;
+    }
+
+    .about-me-skills{
+        align-items: flex-start;
+    }
+
+    .about-me-skills-section{
+        text-align: start;
+    }
 }

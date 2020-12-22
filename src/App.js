@@ -1,18 +1,61 @@
 import './App.scss';
+import {useState, useEffect} from 'react'
 import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom'
 import Navigation from './components/Navigation/Navigation'
 import PortfolioContent from './components/PortfolioContent/PortfolioContent'
+import MobileBurger from './components/MobileBurger/MobileBurger'
+import {getColorsObject, getColors} from './components/colors/colors.js'
+
 
 
 function App() {
+
+  let [colorMode, setColorMode] = useState("dark")
+  let [showMobileNav, setShowMobileNav] = useState(false)
+
+  useEffect(() => {
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches){
+      setColorMode("dark")
+    }
+  }, [])
+
+  let renderMobileNav = () => {
+    if (showMobileNav) {
+      return <Navigation showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} getColorsObject={getColorsObject} getColors={getColors} colorMode={colorMode} switchColorMode={setColorMode} />
+    }
+  }
+
   return (
     <div className="portfolio">
-    
+      <MobileBurger getColors={getColors} colorMode={colorMode} showMobileNav={showMobileNav} setShowMobileNav={setShowMobileNav} />
+      
       <Router>
-        <Navigation />
+        {renderMobileNav()}
+        <Navigation isDesktop={true} getColorsObject={getColorsObject} getColors={getColors} colorMode={colorMode} switchColorMode={setColorMode} />
+
         <Route exact path="/" render={ () => ( <Redirect to="/about" />) } />
-        <Route exact path="/:page" render={ ({ match }) => (<PortfolioContent  page={match.params.page} />) } />
-        <Route path="/projects/:projectName" render={ ({ match }) => (<PortfolioContent  page="project" projectName={match.params.projectName} />) } />
+        <Route exact path="/:page" render={ ({ match }) => (<PortfolioContent key={match.params.page} setShowMobileNav={setShowMobileNav} page={match.params.page} getColors={getColors} getColorsObject={getColorsObject} colorMode={colorMode} switchColorMode={setColorMode}/>) } />
+        <Route path="/projects/:projectName" render={ ({ match }) => (<PortfolioContent key={match.params.projectName} setShowMobileNav={setShowMobileNav} page="project" projectName={match.params.projectName} getColors={getColors} getColorsObject={getColorsObject} colorMode={colorMode} switchColorMode={setColorMode}/>) } />
+
+        <span className="connector-container">
+
+          <span className="connector" id="connector-1">
+            <span className="connector-primary" style={getColorsObject(colorMode, "primary", "background")}></span>
+            <span className="connector-secondary" style={getColorsObject(colorMode, "secondary", "background")} ></span>
+          </span>
+
+          <span className="connector" id="connector-2">
+            <span className="connector-primary" style={getColorsObject(colorMode, "primary", "background")}></span>
+            <span className="connector-secondary" style={getColorsObject(colorMode, "secondary", "background")} ></span>
+          </span>
+
+          <span className="connector" id="connector-3">
+            <span className="connector-primary" style={getColorsObject(colorMode, "primary", "background")}></span>
+            <span className="connector-secondary" style={getColorsObject(colorMode, "secondary", "background")} ></span>
+          </span>
+          
+        </span>
+
       </Router>
     </div>
 

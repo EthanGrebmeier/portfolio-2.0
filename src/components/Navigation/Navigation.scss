@@ -2,12 +2,19 @@
     height: 100%;
     width: 50%;
 
-    background-color: #EAF4F4;
-    color: #6B9080;
-
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
+    position: relative;
+
+    a {
+        color: #6B9080;
+    }
+
+    .dark-link a{
+        color:#355070;
+    }
 }
 
 .navigation-content{
@@ -27,12 +34,11 @@
 .divider{
     width: 50%;
     height: 1px;
-    background-color: #6B9080;
 }
 
 .navigation-menu{
-    margin-top: 50px;
-    height: 50%;
+    margin-top: 20px;
+    height: 55%;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -42,6 +48,10 @@
 .navigation-menu-option{
     font-size: 54px;
     font-family: 'Montserrat-Thin';
+}
+
+.navigation-menu-project{
+    font-size: 42px;
 }
 
 .navigation-menu-option:hover{
@@ -55,7 +65,6 @@
     align-items: center;
     justify-content: space-between;
     background-color: transparent;
-    color:#6B9080;
     border: none;
     text-align: start;
 
@@ -76,13 +85,22 @@
 }
 
 .navigation-menu-projects-links{
-    display: none;
-    
+    overflow: hidden;
+    height: 0px;
+    width: 0;
 }
 
 .show-projects{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    animation: open-projects .5s forwards;
+    width: 100%;
+}
+
+@keyframes open-projects {
+    from {height: 0px;}
+    to {height: 100%;}
 }
 
 .navigation-menu-links{
@@ -96,4 +114,51 @@
 
 .hide-links{
     display: none;
+}
+
+@media screen and (min-width: 1000px){
+  .mobile-navigation {
+    display: none;
+  }
+
+  .show-mobile-navigation{
+      display: none;
+  }
+
+  .desktop-navigation {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1000px){
+ 
+    .show-mobile-navigation{
+        display: flex !important;
+        position: absolute;
+        z-index: 1000;
+        width: 100%;
+    }
+
+    .navigation-content{
+        width: 80%;
+    }
+
+    .navigation-menu{
+        width: 100%;
+    }
+  
+    .navigation-projects-dropdown{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .navigation-container {
+      display: none;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .navigation-name-text{
+        font-size: 54px !important;
+    }
 }

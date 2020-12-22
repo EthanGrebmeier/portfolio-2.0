@@ -2,14 +2,14 @@
     "traace" : {
         "name" : "Traace.io",
         "timeline" : "Sep 2020 - Dec 2020",
-        "description" : "A Contact Tracing Aplication for Covid-19",
+        "description" : "A Contact Tracing Application for Covid-19",
         "stack" : ["React", "Express", "PostreSQL"],
         "gitHub" : "https://github.com/EthanGrebmeier/contact-tracing-server",
         "demo" : "https://traace.io" 
     },
     "sorter" : {
         "name" : "Sorter",
-        "timeline" : "Jun 2020",
+        "timeline" : "June 2020",
         "description" : "A Sorting Algorithm Visualizer",
         "stack" : ["React"],
         "gitHub" : "https://github.com/EthanGrebmeier/sorter",
@@ -18,7 +18,7 @@
     "say-hello" : {
         "name" : "Say Hello",
         "timeline" : "May 2020 - Jun 2020",
-        "description" : "A Contact Tracing Aplication for Covid-19",
+        "description" : "A Barebones Message Board",
         "stack" : ["React", "Express", "MongoDB"],
         "gitHub" : "https://github.com/EthanGrebmeier/say-hello",
         "demo" : "https://traace.io" 

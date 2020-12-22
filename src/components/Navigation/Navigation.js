@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import { UilAngleDown } from '@iconscout/react-unicons'
-
+import IconBar from '../IconBar/IconBar'
 import './Navigation.scss'
 
 class Navigation extends React.Component {
@@ -9,6 +9,14 @@ class Navigation extends React.Component {
         super(props)
         this.state = {
             projectsOpen: false
+        }
+    }
+
+    componentDidMount(){
+        if (this.props.location.pathname.split("/")[1] === "projects"){
+            this.setState({
+                projectsOpen: true
+            })
         }
     }
 
@@ -52,25 +60,34 @@ class Navigation extends React.Component {
         }
     }
 
+    getLinkColor = (mode) => {
+        switch (mode) {
+            case "dark": 
+                return "dark-link"
+            default:
+                return ""
+        }
+    }
+
     render(){
         return (
-            <div className="navigation-container">
-                <div className="navigation-content">
+            <div className={`navigation-container ${this.props.showMobileNav ? "show-mobile-navigation" : ""}`} style={this.props.getColorsObject(this.props.colorMode, "secondary", "background")} >
+                <div className={`navigation-content ${this.getLinkColor(this.props.colorMode)}`} style={this.props.getColorsObject(this.props.colorMode, "primary", "text")}>
                     <div className="navigation-name">
                         <h1 className="navigation-name-text">
                             Ethan Grebmeier
                         </h1>
-                        <div className="divider" />
+                        <div className="divider" style={this.props.getColorsObject(this.props.colorMode, "primary", "background")} />
                     </div>
                     
-                    <div className="navigation-menu">
+                    <div className="navigation-menu" style={this.props.getColorsObject(this.props.colorMode, "primary", "text")} >
 
                         <button className={`navigation-menu-option navigation-projects-dropdown ${this.state.projectsOpen ? 'open' : 'closed'}`} style={this.checkSelectedLink("projects")} onClick={this.openProjects}> 
-                            Projects 
-                            <UilAngleDown size="50" color="#6B9080" className="projects-arrow" /> 
+                            <span style={this.props.getColorsObject(this.props.colorMode, "primary", "text")}> Projects  </span>
+                            <UilAngleDown size="50" color={this.props.getColors(this.props.colorMode, "primary", "background")} className="projects-arrow" /> 
                         </button>
 
-                        <div className={`navigation-menu-projects-links ${this.getProjectsStyle()} `}>
+                        <div className={`navigation-menu-projects-links ${this.getProjectsStyle()}`} >
                             <Link to='/projects/traace' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("traace")} > - Traace </Link>
                             <Link to='/projects/sorter' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("sorter")} > - Sorter </Link>
                             <Link to='/projects/say-hello' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("say-hello")} > - Say Hello </Link>
@@ -87,6 +104,7 @@ class Navigation extends React.Component {
 
                     </div>
                 </div>
+                <IconBar color={this.props.getColors(this.props.colorMode, "primary", "background")} colorMode={this.props.colorMode} switchColorMode={this.props.switchColorMode} />
             </div>
         )
     }

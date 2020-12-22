@@ -2,6 +2,7 @@ import React from 'react'
 import {withRouter} from 'react-router-dom'
 import './Project.scss'
 import projects from './projects.json'
+import SkillBubble from '../SkillBubble/SkillBubble'
 
 class Project extends React.Component {
 
@@ -18,7 +19,6 @@ class Project extends React.Component {
     }
 
     componentDidMount(){
-        console.log(JSON.stringify(projects))
         this.getProjectDetails(this.props.projectName)
     }
 
@@ -41,29 +41,29 @@ class Project extends React.Component {
     }
 
     getProjectStack = () => {
-        return this.state.projectStack.map((item) => (<h3 className="project-div-item"> - {item} </h3>)
+        return this.state.projectStack.map((item) => (<SkillBubble size="large" skillName={item} color={this.props.getColors(this.props.colorMode, "secondary", "background")} />)
         )
     }
 
     render(){
         return(
-            <div className="project-content">
+            <div className="project-content" style={this.props.getColorsObject(this.props.colorMode, "secondary", "text")}>
                 <div className="project-header">
                     <h3 className="project-timeline"> <br/> {this.state.projectTimeline} </h3>
                     <h1 className="project-name">{this.state.projectName}</h1>
                 </div>
                 <div className="project-description">
-                    <div className="divider" />
+                    <div className="divider" style={this.props.getColorsObject(this.props.colorMode, "secondary", "background")} />
                     <h3 className="project-description-text"> {this.state.projectDescription} </h3>
-                    <div className="divider" />
+                    <div className="divider" style={this.props.getColorsObject(this.props.colorMode, "secondary", "background")} />
                 </div>
                 <div className="project-stack">
                     <h3 className="project-stack-header"> Built Using: </h3>
                     {this.getProjectStack()}
                 </div>
-                <div className="project-links">
-                    <a href={this.state.projectDemo} className="project-link"> Demo </a>
-                    <a href={this.state.projectGitHub} className="project-link"> Github </a>
+                <div className="project-links" >
+                    <a href={this.state.projectDemo} className="project-link" style={this.props.getColorsObject(this.props.colorMode, "secondary", "text")}> Demo </a>
+                    <a href={this.state.projectGitHub} className="project-link" style={this.props.getColorsObject(this.props.colorMode, "secondary", "text")}> Github </a>
                 </div>
             </div>
         )

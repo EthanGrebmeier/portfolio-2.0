@@ -1,0 +1,14 @@
+.icon-bar{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%)
+}
+
+.icon-bar-button{
+    border: none;
+    background-color: transparent;
+}

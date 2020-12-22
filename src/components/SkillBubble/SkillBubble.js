@@ -1,21 +1,22 @@
 import React from 'react'
 
-let styles = {
-    skillBubble : {
-        height: "25px",
-        width: "120px",
-        marginTop: "10px",
-        borderRadius: "20px",
-        border: "1px solid #EAF4F4",
-        color: "#EAF4F4",
-        fontSize: "14px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-    }
-}
 
 export default function SkillBubble(props){
+    let styles = {
+        skillBubble : {
+            height: props.size === "small" ? "25px" : "35px",
+            width: props.size === "small" ? "120px" : "150px",
+            marginTop: "10px",
+            borderRadius: "20px",
+            border: `1px solid ${props.color}`,
+            color: `${props.color}`,
+            fontSize: props.size === "small" ? "14px" : "20px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+        }
+    }
+
     return (
     <div style={styles.skillBubble}>
         {props.skillName}
