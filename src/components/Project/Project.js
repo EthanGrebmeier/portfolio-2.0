@@ -62,8 +62,8 @@ class Project extends React.Component {
                     {this.getProjectStack()}
                 </div>
                 <div className="project-links" >
-                    <a href={this.state.projectDemo} className="project-link" style={this.props.getColorsObject(this.props.colorMode, "secondary", "text")}> Demo </a>
-                    <a href={this.state.projectGitHub} className="project-link" style={this.props.getColorsObject(this.props.colorMode, "secondary", "text")}> Github </a>
+                    <a href={this.state.projectDemo} target="_blank" rel="noreferrer" className="project-link" style={this.props.getColorsObject(this.props.colorMode, "secondary", "text")}> Demo </a>
+                    <a href={this.state.projectGitHub} target="_blank" rel="noreferrer" className="project-link" style={this.props.getColorsObject(this.props.colorMode, "secondary", "text")}> Github </a>
                 </div>
             </div>
         )
