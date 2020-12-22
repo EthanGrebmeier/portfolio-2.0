@@ -34,9 +34,6 @@ export default function AboutMe(props){
         </div>
 
         <div className="about-me-skills" style={props.getColorsObject(props.colorMode, "secondary", "text")}>
-
-            <h3> Skills </h3>
-
             <div className="about-me-skills-section">
                 <h4> Programming Languages: </h4>
                 <div className="about-me-skills-bubbles">

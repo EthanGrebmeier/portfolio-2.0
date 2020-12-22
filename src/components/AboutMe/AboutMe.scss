@@ -88,6 +88,7 @@
     }
 
     .about-me-professional-text{
+        font-size: 18px !important;
         text-align: start;
         margin-left: 10px;
     }
@@ -103,4 +104,9 @@
     .about-me-skills-section{
         text-align: start;
     }
+
+    .about-me-skills-section h4{
+        font-family:  'Montserrat-Light' !important;
+    }
+
 }
