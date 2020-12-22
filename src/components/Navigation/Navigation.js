@@ -21,7 +21,6 @@ class Navigation extends React.Component {
     }
 
     openProjects = () => {
-        console.log("clicked")
         let current = this.state.projectsOpen
         this.setState({
             projectsOpen: !current

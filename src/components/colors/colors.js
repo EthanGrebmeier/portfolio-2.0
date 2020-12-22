@@ -13,11 +13,10 @@ export let getColorsObject = (mode, type, element) => {
     if (colors[mode]){
         switch (element) {
             case "background":
-                console.log("background")
                 return { "background" : colors[mode][type] }
         
             default:
-                console.log("color")
+
                 return { "color" : colors[mode][type] }
         }
     } else {
@@ -31,11 +30,9 @@ export let getColors = (mode, type, element) => {
     if (colors[mode]){
         switch (element) {
             case "background":
-                console.log("background")
                 return colors[mode][type]
         
             default:
-                console.log("color")
                 return colors[mode][type]
         }
     } else {
