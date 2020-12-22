@@ -8,7 +8,8 @@ class Navigation extends React.Component {
     constructor(props){
         super(props)
         this.state = {
-            projectsOpen: false
+            projectsOpen: false,
+            isMobile: false
         }
     }
 
@@ -16,6 +17,12 @@ class Navigation extends React.Component {
         if (this.props.location.pathname.split("/")[1] === "projects"){
             this.setState({
                 projectsOpen: true
+            })
+        }
+
+        if (window.innerWidth <= 1000){
+            this.setState({
+                isMobile: true
             })
         }
     }
@@ -83,7 +90,7 @@ class Navigation extends React.Component {
 
                         <button className={`navigation-menu-option navigation-projects-dropdown ${this.state.projectsOpen ? 'open' : 'closed'}`} style={this.checkSelectedLink("projects")} onClick={this.openProjects}> 
                             <span style={this.props.getColorsObject(this.props.colorMode, "primary", "text")}> Projects  </span>
-                            <UilAngleDown size={50} color={this.props.getColors(this.props.colorMode, "primary", "background")} className="projects-arrow" /> 
+                            <UilAngleDown size={`${this.state.isMobile ? '100' : '50'}`} color={this.props.getColors(this.props.colorMode, "primary", "background")} className="projects-arrow" /> 
                         </button>
 
                         <div className={`navigation-menu-projects-links ${this.getProjectsStyle()}`} >
