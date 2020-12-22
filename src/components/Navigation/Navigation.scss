@@ -61,13 +61,16 @@
 }
 
 .navigation-projects-dropdown{
-    width: 90%;
     display: flex;
     align-items: center;
     background-color: transparent;
     border: none;
     text-align: start;
 
+}
+
+.projects-arrow{
+    margin-left: 10px;
 }
 
 .closed{
