@@ -84,7 +84,7 @@ class Navigation extends React.Component {
 
                         <button className={`navigation-menu-option navigation-projects-dropdown ${this.state.projectsOpen ? 'open' : 'closed'}`} style={this.checkSelectedLink("projects")} onClick={this.openProjects}> 
                             <span style={this.props.getColorsObject(this.props.colorMode, "primary", "text")}> Projects  </span>
-                            <UilAngleDown size="50" color={this.props.getColors(this.props.colorMode, "primary", "background")} className="projects-arrow" /> 
+                            <UilAngleDown size={50} color={this.props.getColors(this.props.colorMode, "primary", "background")} className="projects-arrow" /> 
                         </button>
 
                         <div className={`navigation-menu-projects-links ${this.getProjectsStyle()}`} >
