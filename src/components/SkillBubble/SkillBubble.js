@@ -8,9 +8,10 @@ export default function SkillBubble(props){
             width: props.size === "small" ? "120px" : "150px",
             marginTop: "10px",
             borderRadius: "20px",
-            border: `1px solid ${props.color}`,
+            border: `2px solid ${props.color}`,
             color: `${props.color}`,
             fontSize: props.size === "small" ? "14px" : "20px",
+            fontWeight: '600',
             display: "flex",
             justifyContent: "center",
             alignItems: "center"
