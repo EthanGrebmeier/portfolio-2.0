@@ -1,0 +1,14 @@
+.sorter-app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #355070;
+  position: absolute;
+  z-index: 2000;
+}
+
+.App h1{
+  font-size: 32px;
+}

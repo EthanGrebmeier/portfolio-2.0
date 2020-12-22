@@ -1,0 +1,34 @@
+.reader{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2000;
+  background-color: #355070;
+}
+
+.reader-input{
+  background-color: #E56B6F;
+  border: 2px solid black;
+  width: 35%;
+  min-width: 330px;
+  height: 48%;
+  position: relative;
+  margin-top: 20px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  border-radius: 6px;
+}
+
+
+.text-input{
+  margin-top: 10px;
+  border-radius: 6px;
+  padding: 5px;
+  resize: none;
+}

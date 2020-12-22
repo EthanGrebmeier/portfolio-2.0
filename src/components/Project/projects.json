@@ -13,7 +13,7 @@
         "description" : "A Sorting Algorithm Visualizer",
         "stack" : ["React"],
         "gitHub" : "https://github.com/EthanGrebmeier/react-sorter",
-        "demo" : "https://ethan-grebmeier-sorter.herokuapp.com/"
+        "demo" : "/demo/sorter"
     },
     "say-hello" : {
         "name" : "Say Hello",
@@ -21,7 +21,7 @@
         "description" : "A Barebones Message Board",
         "stack" : ["React", "Express", "MongoDB"],
         "gitHub" : "https://github.com/EthanGrebmeier/react-say-hello",
-        "demo" : "https://ethan-grebmeier-say-hello.herokuapp.com/" 
+        "demo" : "/demo/say-hello" 
     },
     "memorizer" : {
         "name" : "Memorizer",
@@ -37,7 +37,7 @@
         "description" : "A Speed Reading Assistant",
         "stack" : ["React"],
         "gitHub" : "https://github.com/EthanGrebmeier/react-reader",
-        "demo" : "https://ethan-grebmeier-reader.herokuapp.com/" 
+        "demo" : "/demo/reader" 
     },
     "guesser" : {
         "name" : "Guesser",
@@ -45,6 +45,6 @@
         "description" : "A Number Guessing Game",
         "stack" : ["React"],
         "gitHub" : "https://github.com/EthanGrebmeier/react-guesser",
-        "demo" : "https://ethan-grebmeier-guesser.herokuapp.com/" 
+        "demo" : "/demo/guesser" 
     }
 }
