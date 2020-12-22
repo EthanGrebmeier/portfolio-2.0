@@ -13,15 +13,15 @@
         "description" : "A Sorting Algorithm Visualizer",
         "stack" : ["React"],
         "gitHub" : "https://github.com/EthanGrebmeier/sorter",
-        "demo" : "" 
+        "demo" : "https://ethan-grebmeier-sorter.herokuapp.com/"
     },
     "say-hello" : {
         "name" : "Say Hello",
         "timeline" : "May 2020 - Jun 2020",
         "description" : "A Barebones Message Board",
         "stack" : ["React", "Express", "MongoDB"],
-        "gitHub" : "https://github.com/EthanGrebmeier/say-hello",
-        "demo" : "https://traace.io" 
+        "gitHub" : "https://github.com/EthanGrebmeier/react-say-hello",
+        "demo" : "https://ethan-grebmeier-say-hello.herokuapp.com/" 
     },
     "memorizer" : {
         "name" : "Memorizer",
@@ -29,22 +29,22 @@
         "description" : "A Memorization Matching Game",
         "stack" : ["Javascript"],
         "gitHub" : "https://github.com/EthanGrebmeier/memorizer",
-        "demo" : "https://traace.io" 
+        "demo" : "https://ethan-grebmeier-memorizer.herokuapp.com/" 
     },
     "reader" : {
         "name" : "Reader",
         "timeline" : "May 2020",
         "description" : "A Speed Reading Assistant",
-        "stack" : ["Javascript"],
-        "gitHub" : "https://github.com/EthanGrebmeier/reader",
-        "demo" : "https://traace.io" 
+        "stack" : ["React"],
+        "gitHub" : "https://github.com/EthanGrebmeier/react-reader",
+        "demo" : "https://ethan-grebmeier-reader.herokuapp.com/" 
     },
     "guesser" : {
         "name" : "Guesser",
         "timeline" : "April 2020",
         "description" : "A Number Guessing Game",
-        "stack" : ["Javascript"],
-        "gitHub" : "https://github.com/EthanGrebmeier/guesser",
-        "demo" : "https://traace.io" 
+        "stack" : ["React"],
+        "gitHub" : "https://github.com/EthanGrebmeier/react-guesser",
+        "demo" : "https://ethan-grebmeier-guesser.herokuapp.com/" 
     }
 }
