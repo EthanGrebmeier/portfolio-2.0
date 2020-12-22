@@ -90,7 +90,7 @@ class Navigation extends React.Component {
 
                         <button className={`navigation-menu-option navigation-projects-dropdown ${this.state.projectsOpen ? 'open' : 'closed'}`} style={this.checkSelectedLink("projects")} onClick={this.openProjects}> 
                             <span style={this.props.getColorsObject(this.props.colorMode, "primary", "text")}> Projects  </span>
-                            <UilAngleDown size={`${this.state.isMobile ? '100' : '50'}`} color={this.props.getColors(this.props.colorMode, "primary", "background")} className="projects-arrow" /> 
+                            <UilAngleDown size="30" color={this.props.getColors(this.props.colorMode, "primary", "background")} className="projects-arrow" /> 
                         </button>
 
                         <div className={`navigation-menu-projects-links ${this.getProjectsStyle()}`} >
@@ -105,7 +105,7 @@ class Navigation extends React.Component {
                         <div className={`navigation-menu-links ${this.getLinkStyle()} `} >
                             <Link to='/about' className="navigation-menu-option" style={this.checkSelectedLink("about")} > About Me </Link>
                             <Link to='/experience' className="navigation-menu-option" style={this.checkSelectedLink("experience")} > Experience </Link>
-                            <Link to='/resume' className="navigation-menu-option" style={this.checkSelectedLink("resume")} > Resume </Link>
+                            <a href='https://drive.google.com/file/d/1gweVn7KRg_OwJkw2KKU1Y8EpaEOE-bGp/view?usp=sharing' target="_blank" rel="noreferrer" className="navigation-menu-option" style={this.checkSelectedLink("resume")} > Resume </a>
                         </div>
 
                     </div>
