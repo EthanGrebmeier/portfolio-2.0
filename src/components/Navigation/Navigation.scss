@@ -24,6 +24,12 @@
     width: 80%;
 }
 
+@media screen and (min-width: 1000px) and (max-height: 700px){
+    .navigation-content{
+        height: 100%;
+    }
+}
+
 .navigation-name{
     max-width: 400px;
     height: 30%;

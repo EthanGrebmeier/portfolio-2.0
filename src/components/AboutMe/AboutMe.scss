@@ -63,6 +63,12 @@
     flex-wrap: wrap;
 }
 
+@media screen and (min-width: 1000px) and (max-height: 700px){
+    .about-me-content{
+        height: 100%;
+    }
+}
+
 @media screen and (max-width: 1000px){
 
     .about-me-content{
