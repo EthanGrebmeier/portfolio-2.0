@@ -38,7 +38,7 @@ function App() {
         {renderMobileNav()}
         <Navigation isDesktop={true} getColorsObject={getColorsObject} getColors={getColors} colorMode={colorMode} switchColorMode={setColorMode} />
 
-        <Route exact path="/" render={ () => ( <Redirect to="/about" />) } />
+        <Route exact path="/" render={ () => ( <Redirect to="/projects/traace" />) } />
         <Route exact path="/:page" render={ ({ match }) => (<PortfolioContent key={match.params.page} setShowMobileNav={setShowMobileNav} page={match.params.page} getColors={getColors} getColorsObject={getColorsObject} colorMode={colorMode} switchColorMode={setColorMode}/>) } />
         <Route path="/projects/:projectName" render={ ({ match }) => (<PortfolioContent key={match.params.projectName} setShowMobileNav={setShowMobileNav} page="project" projectName={match.params.projectName} getColors={getColors} getColorsObject={getColorsObject} colorMode={colorMode} switchColorMode={setColorMode}/>) } />
 
