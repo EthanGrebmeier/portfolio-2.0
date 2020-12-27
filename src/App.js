@@ -16,7 +16,7 @@ import {getColorsObject, getColors} from './components/colors/colors.js'
 function App() {
 
   let [colorMode, setColorMode] = useState("light")
-  let [showMobileNav, setShowMobileNav] = useState(false)
+  let [showMobileNav, setShowMobileNav] = useState(true)
 
   useEffect(() => {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches){

@@ -14,11 +14,6 @@ class Navigation extends React.Component {
     }
 
     componentDidMount(){
-        if (this.props.location.pathname.split("/")[1] === "projects"){
-            this.setState({
-                projectsOpen: true
-            })
-        }
 
         if (window.innerWidth <= 1000){
             this.setState({
