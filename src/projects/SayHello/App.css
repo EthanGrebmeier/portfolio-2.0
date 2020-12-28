@@ -1,6 +1,10 @@
 .hello-app{
     width: 100%;
+<<<<<<< HEAD
     height: 1400px;
+=======
+    height: 1600px;
+>>>>>>> a1d08e8236e62a99d7dfefe2550fd346090e6e27
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +13,12 @@
     z-index: 2000;
 }
 
+.hello-app h1{
+    font-size: 2em;
+}
+
 @media screen and (max-width: 800px){
     .hello-app{
-        height: 330vh;
+        height: 2800px;
     }
 }
