@@ -4,6 +4,8 @@ import { UilAngleDown } from '@iconscout/react-unicons'
 import IconBar from '../IconBar/IconBar'
 import './Navigation.scss'
 
+
+
 class Navigation extends React.Component {
     constructor(props){
         super(props)
@@ -12,8 +14,8 @@ class Navigation extends React.Component {
         }
     }
 
-    componentDidMount(){
-        console.log(this.props)
+    NavLink = ({...rest}) => {
+            return <Link {...rest} onClick={() => this.props.setShowMobileNav(false) } />
     }
 
     openProjects = () => {
@@ -82,17 +84,17 @@ class Navigation extends React.Component {
                         </div>
 
                         <div className={`navigation-menu-projects-links ${this.getProjectsStyle()}`} >
-                            <Link to='/projects/traace' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("traace")} > - Traace </Link>
-                            <Link to='/projects/sorter' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("sorter")} > - Sorter </Link>
-                            <Link to='/projects/say-hello' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("say-hello")} > - Say Hello </Link>
-                            <Link to='/projects/memorizer' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("memorizer")} > - Memorizer </Link>
-                            <Link to='/projects/reader' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("reader")} > - Reader </Link>
-                            <Link to='/projects/guesser' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("guesser")} > - Guesser </Link>
+                            <this.NavLink to='/projects/traace' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("traace")} > - Traace </this.NavLink>
+                            <this.NavLink to='/projects/sorter' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("sorter")} > - Sorter </this.NavLink>
+                            <this.NavLink to='/projects/say-hello' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("say-hello")} > - Say Hello </this.NavLink>
+                            <this.NavLink to='/projects/memorizer' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("memorizer")} > - Memorizer </this.NavLink>
+                            <this.NavLink to='/projects/reader' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("reader")} > - Reader </this.NavLink>
+                            <this.NavLink to='/projects/guesser' className="navigation-menu-option navigation-menu-project" style={this.checkSelectedProject("guesser")} > - Guesser </this.NavLink>
                         </div>
 
                         <div className={`navigation-menu-links ${this.getLinkStyle()} `} >
-                            <Link to='/about' className="navigation-menu-option" style={this.checkSelectedLink("about")} > About Me </Link>
-                            <Link to='/experience' className="navigation-menu-option" style={this.checkSelectedLink("experience")} > Experience </Link>
+                            <this.NavLink to='/about' className="navigation-menu-option" style={this.checkSelectedLink("about")} > About Me </this.NavLink>
+                            <this.NavLink to='/experience' className="navigation-menu-option" style={this.checkSelectedLink("experience")} > Experience </this.NavLink>
                             <a href='https://drive.google.com/file/d/1gweVn7KRg_OwJkw2KKU1Y8EpaEOE-bGp/view?usp=sharing' target="_blank" rel="noreferrer" className="navigation-menu-option" style={this.checkSelectedLink("resume")} > Resume </a>
                         </div>
 

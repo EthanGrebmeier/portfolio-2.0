@@ -22,12 +22,10 @@ function App() {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches){
       setColorMode("dark")
     }
-    console.log(showMobileNav)
   }, [])
 
   let renderMobileNav = () => {
     if (showMobileNav) {
-      console.log("YEA I SHOULD BE")
       return <Navigation mobile={true} setShowMobileNav={setShowMobileNav} getColorsObject={getColorsObject} getColors={getColors} colorMode={colorMode} switchColorMode={setColorMode} />
     }
   }
