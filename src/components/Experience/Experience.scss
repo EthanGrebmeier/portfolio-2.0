@@ -1,6 +1,11 @@
-.portfolio-content h3{
-    font-size: 24px;
-    font-family: 'Montserrat-Thin';
+.experience-content h3, .experience-content a{
+    font-size: 24px !important; 
+}
+
+.experience-content a{
+    font-family: 'Montserrat-Light';
+    text-decoration: underline;
+    color: inherit;
 }
 
 .experience-container{
