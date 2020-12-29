@@ -9,22 +9,11 @@ class Navigation extends React.Component {
         super(props)
         this.state = {
             projectsOpen: false,
-            isMobile: false
         }
     }
 
     componentDidMount(){
-        if (this.props.location.pathname.split("/")[1] === "projects"){
-            this.setState({
-                projectsOpen: true
-            })
-        }
-
-        if (window.innerWidth <= 1000){
-            this.setState({
-                isMobile: true
-            })
-        }
+        console.log(this.props)
     }
 
     openProjects = () => {
@@ -61,7 +50,7 @@ class Navigation extends React.Component {
 
         if (path[1] === "projects" && path[2] === name) {
             return {
-                fontFamily : "Montserrat"
+                fontFamily : "Montserrat-Bold"
             }
         }
     }
@@ -77,7 +66,7 @@ class Navigation extends React.Component {
 
     render(){
         return (
-            <div className={`navigation-container ${this.props.showMobileNav ? "show-mobile-navigation" : ""}`} style={this.props.getColorsObject(this.props.colorMode, "secondary", "background")} >
+            <div className={`navigation-container ${this.props.mobile === true ? "show-mobile-navigation" : ""}`} style={this.props.getColorsObject(this.props.colorMode, "secondary", "background")} >
                 <div className={`navigation-content ${this.getLinkColor(this.props.colorMode)}`} style={this.props.getColorsObject(this.props.colorMode, "primary", "text")}>
                     <div className="navigation-name">
                         <h1 className="navigation-name-text">

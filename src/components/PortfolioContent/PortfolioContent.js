@@ -8,9 +8,7 @@ import './PortfolioContent.scss'
 
 function PortfolioContent(props){
 
-    useEffect(() => {
-        props.setShowMobileNav(false)
-    }, [])
+
 
     let getPortfolioContent = (page) => {
         switch (page) {

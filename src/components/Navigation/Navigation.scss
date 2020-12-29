@@ -55,6 +55,7 @@
 .navigation-menu-option{
     font-size: 54px;
     font-family: 'Montserrat-Thin';
+    transition: transform 400ms;
     cursor: pointer;
 }
 
@@ -96,8 +97,9 @@
 
 .navigation-menu-projects-links{
     overflow: hidden;
-    height: 0px;
     width: 0;
+    height: 0;
+    transform: height 2s;
 }
 
 .show-projects{
@@ -111,6 +113,11 @@
 @keyframes open-projects {
     from {height: 0px;}
     to {height: 100%;}
+}
+
+@keyframes close-projects {
+    from {height: 100%;}
+    to {height: 0px;}
 }
 
 .navigation-menu-links{
@@ -163,7 +170,8 @@
     }
 
     .navigation-menu-project{
-        font-size: 40px;
+        font-family: 'Montserrat-Light';
+        font-size: 36px;
     }
   
     .navigation-projects-dropdown{
