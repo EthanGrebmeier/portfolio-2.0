@@ -10,7 +10,7 @@
 
 .experience-container{
     width: 80%;
-    height: 85%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -81,8 +81,8 @@
 
 @media screen and (max-width: 400px){
     .experience-container{
-        .timeline, .company, .position{
-            font-size: 20px !important;
+        .timeline, .company, .position, .experience-content a{
+            font-size: 18px !important;
         }
     }
 }
