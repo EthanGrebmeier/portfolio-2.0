@@ -15,7 +15,9 @@ class Navigation extends React.Component {
     }
 
     NavLink = ({...rest}) => {
-            return <Link {...rest} onClick={() => this.props.setShowMobileNav(false) } />
+            return this.props.mobile 
+                ? <Link {...rest} onClick={() => this.props.setShowMobileNav(false) } /> 
+                : <Link {...rest} />
     }
 
     openProjects = () => {
