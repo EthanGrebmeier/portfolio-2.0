@@ -97,7 +97,7 @@ class Navigation extends React.Component {
                         <div className={`navigation-menu-links ${this.getLinkStyle()} `} >
                             <this.NavLink to='/about' className="navigation-menu-option" style={this.checkSelectedLink("about")} > About Me </this.NavLink>
                             <this.NavLink to='/experience' className="navigation-menu-option" style={this.checkSelectedLink("experience")} > Experience </this.NavLink>
-                            <a href='https://drive.google.com/file/d/1gweVn7KRg_OwJkw2KKU1Y8EpaEOE-bGp/view?usp=sharing' target="_blank" rel="noreferrer" className="navigation-menu-option" style={this.checkSelectedLink("resume")} > Resume </a>
+                            <a href='https://drive.google.com/file/d/1v3kY2pRC10Yh8KwsDcBhj5szkGEiI2BV/view?usp=sharing' target="_blank" rel="noreferrer" className="navigation-menu-option" style={this.checkSelectedLink("resume")} > Resume </a>
                         </div>
 
                     </div>
